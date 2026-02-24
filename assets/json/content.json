@@ -1,0 +1,430 @@
+[
+  {
+    "title": "⚡ Artigos",
+    "htmlAttributes": {
+      "classNameSection": "artigos-section content-section container",
+      "idSection": "conteudos",
+      "classNameList": "blog-grid",
+      "classNameLink": "card"
+    },
+    "items": [
+      {
+        "dataCategory": "artigo system-design",
+        "cardLink": "https://www.linkedin.com/pulse/system-design-101-conceitos-b%C3%A1sicos-para-suas-mayumi-shingaki-1vjuf/?trackingId=H8PC%2FzgmT5Ke0os6luTZCA%3D%3D",
+        "cardImage": {
+          "imageSrc": "./images/artigos/mayumi-system-design-conceitos-basicos.png",
+          "imageAlt": "Artigo: System Design 101: conceitos básicos"
+        },
+        "cardTag": "Artigo",
+        "cardTitle": "System Design 101: Conceitos básicos para suas primeiras Arquiteturas ♥",
+        "cardDescription": "Projetar sistemas escaláveis e resilientes é uma habilidade fundamental na jornada de qualquer engenheiro de software. Quando você passa de implementar componentes individuais para desenhar soluções completas, um novo conjunto de desafios surge — e com eles, a necessidade de dominar conceitos arquiteturais que raramente são ensinados nas universidades ou bootcamps.",
+        "cardMetaData": "Mayumi Shingaki • 5 min"
+      },
+      {
+        "dataCategory": "artigo system-design",
+        "cardLink": "https://www.linkedin.com/pulse/criando-system-design-na-pr%C3%A1tica-ana-neri-gwqff/?trackingId=hQYkzQzuS0qqB2gqLO0Q8Q%3D%3D",
+        "cardImage": {
+          "imageSrc": "./images/artigos/ana-neri-system-design-na-pratica.png",
+          "imageAlt": "Artigo: System Design na prática"
+        },
+        "cardTag": "Artigo",
+        "cardTitle": "Criando System Design na prática",
+        "cardDescription": "Como criar a arquitetura de um sistema inspirado no ingresso.com — explicando os fundamentos essenciais que todo dev sênior precisa dominar.",
+        "cardMetaData": "Ana Neri • 5 min"
+      },
+      {
+        "dataCategory": "artigo system-design",
+        "cardLink": "https://www.linkedin.com/pulse/aprenda-usar-cache-inteligente-ana-neri-7lbhf/?trackingId=NcZgFCkUT52ip1vgGftIFA%3D%3D",
+        "cardImage": {
+          "imageSrc": "./images/artigos/ana-neri-aprenda-usar-cache-da-forma-inteligente.png",
+          "imageAlt": "Artigo: Aprenda usar Cache de forma Inteligente"
+        },
+        "cardTag": "Artigo",
+        "cardTitle": "Aprenda usar Cache de forma Inteligente",
+        "cardDescription": "Se você já sofreu com endpoints lentos ou sobrecarga no banco de dados, talvez o que esteja faltando na sua stack seja um cache bem implementado.",
+        "cardMetaData": "Ana Neri • 5 min"
+      },
+      {
+        "dataCategory": "artigo carreira",
+        "cardLink": "https://www.linkedin.com/pulse/deploy-na-sexta-57-como-se-destacar-em-um-est%C3%A1gio-giulia-bordignon-x2v6f/?trackingId=gjDUaMqNQ%2FSVP2kHxpCoyA%3D%3D",
+        "cardImage": {
+          "imageSrc": "./images/artigos/spacecoding-como-destacar-primeira-vaga.png",
+          "imageAlt": "Artigo: Como se destacar na primeira vaga?"
+        },
+        "cardTag": "Artigo",
+        "cardTitle": "Deploy na Sexta #57: Como se destacar em um estágio?",
+        "cardDescription": "Estágio é a ponte entre a sala de aula e o mercado de trabalho. É o momento de sair da teoria e ver como as coisas realmente funcionam, com prazos, demandas e problemas que não vêm prontos no livro. Ninguém espera que tu chegue sabendo, mas esperam que tu chegue com a cabeça aberta para aprender e crescer.",
+        "cardMetaData": "Giulia Bordignon • 5 min"
+      },
+      {
+        "dataCategory": "artigo carreira",
+        "cardLink": "https://www.linkedin.com/pulse/como-transformar-sua-carreira-dev-em-2026-larissa-azevedo-aey6f/?trackingId=QL5YwLQSSnqDL44UkgJb%2BQ%3D%3D",
+        "cardImage": {
+          "imageSrc": "./images/artigos/larissa-azevedo-como-transformar-carreira-2026.png",
+          "imageAlt": "Artigo: Como transformar sua carreira dev em 2026?"
+        },
+        "cardTag": "Artigo",
+        "cardTitle": "Como transformar sua carreira dev em 2026?",
+        "cardDescription": "Ser bom tecnicamente já não é suficiente. O que vai te destacar de verdade é como você é percebido: 4 verdades que você precisa saber para crescer e se destacar como desenvolvedor em 2026.",
+        "cardMetaData": "Giulia Bordignon • 5 min"
+      },
+      {
+        "dataCategory": "artigo",
+        "cardLink": "https://www.linkedin.com/pulse/stephletter-26-conte%C3%BAdos-gratuitos-para-voc%C3%AA-aprender-cardoso-0sbcf/?trackingId=JaQlw%2F%2BzRMqypXIJcFwJXA%3D%3D",
+        "cardImage": {
+          "imageSrc": "./images/artigos/dev-step-conteudos-gratuitos-aprender-programacao.png",
+          "imageAlt": "Artigo: Conteúdos gratuitos para você aprender programação"
+        },
+        "cardTag": "Artigo",
+        "cardTitle": "Conteúdos gratuitos para você aprender programação",
+        "cardDescription": "O que não falta são recursos gratuitos na Internet pra você aprender programação, né? Pois é, por isso é importante não só buscar conteúdos mas BUSCAR O CONTEÚDO CERTO.",
+        "cardMetaData": "Stephanie Cardoso • 3 min"
+      }
+    ]
+  },
+  {
+    "title": "⚡ Livros & E-books",
+    "htmlAttributes": {
+      "classNameSection": "books-section content-section container",
+      "classNameList": "blog-grid",
+      "classNameLink": "card"
+    },
+    "items": [
+      {
+        "dataCategory": "livro",
+        "cardLink": "http://parceiro.casadocodigo.com.br/r/aKL4/livro-mulheres-em-tecnologia",
+        "cardImage": {
+          "imageSrc": "./images/ebooks/casa-do-codigo-mulheres-em-tecnologia.webp",
+          "imageAlt": "Livro: Mulheres em Tecnologia"
+        },
+        "cardTag": "Livro",
+        "cardTitle": "Mulheres em Tecnologia: Como a diversidade e inclusão vão mudar o jogo nas empresas e na sociedade",
+        "cardDescription": "Em um mundo que está sendo construído através da tecnologia, a inclusão e a diversidade emergem não apenas como valores éticos, mas como necessidade para a inovação e o progresso da área. Neste livro, as autoras Beatriz e Mariana nos convidam a uma reflexão profunda sobre as estruturas de poder vigentes, os vieses culturais inconscientes e as barreiras sistêmicas que ainda impedem muitas meninas e mulheres, especialmente aquelas na interseção de identidades marginalizadas, de entrar, permanecer e prosperar na tecnologia.",
+        "cardMetaData": "Beatriz Oliveira & Mariana Carvalho"
+      },
+      {
+        "dataCategory": "livro",
+        "cardLink": "https://a.co/d/0aOwj5v7",
+        "cardImage": {
+          "imageSrc": "./images/ebooks/caroline-paier-quero-ser-qa.jpg",
+          "imageAlt": "E-book: Quero ser QA, e agora?"
+        },
+        "cardTag": "E-book",
+        "cardTitle": "Quero ser QA, e agora?: Conheça a jornada do Analista de Testes e QA",
+        "cardDescription": "Entrar na área de Testes e Qualidade de Software vai muito além de aprender ferramentas. Quero ser QA, e agora? é um livro pensado para quem está começando, mudando de carreira ou buscando compreender melhor o papel do QA no desenvolvimento de software.",
+        "cardMetaData": "Caroline Paier"
+      },
+      {
+        "dataCategory": "livro",
+        "cardLink": "http://parceiro.casadocodigo.com.br/r/aKL4/livro-portugol",
+        "cardImage": {
+          "imageSrc": "./images/ebooks/casa-do-codigo-logica-programacao-portugol.webp",
+          "imageAlt": "Livro: Lógica de Programação com Portugol"
+        },
+        "cardTag": "E-book",
+        "cardTitle": "Lógica de programação com Portugol",
+        "cardDescription": "O primeiro passo no mundo do desenvolvimento de aplicativos, softwares e sistemas informatizados envolve lógica de programação. É conhecer conceitos fundamentais sobre o funcionamento de comandos para passarmos para o computador o que ele deve fazer e qual a sequência correta do que deve ser feito. Isso se torna mais palpável com uma linguagem mais próxima à que já dominamos: o português.",
+        "cardMetaData": "Joice Barbosa Mendes"
+      }
+    ]
+  },
+  {
+    "title": "📺 Canais do YouTube",
+    "htmlAttributes": {
+      "classNameSection": "content-section container",
+      "idSection": "youtube-channels",
+      "classNameList": "round-list",
+      "classNameLink": "round-card"
+    },
+    "items": [
+      {
+        "dataCategory": "youtube programacao carreira",
+        "cardLink": "https://www.youtube.com/@attekitadev",
+        "cardImage": {
+          "imageSrc": "./images/youtube-channels/attekita-dev.jpg",
+          "imageAlt": "Canal Attekita Dev - conteúdo sobre programação e carreira"
+        },
+        "cardTitle": "Attekita"
+      },
+      {
+        "dataCategory": "youtube programacao carreira",
+        "cardLink": "https://www.youtube.com/@kipperdev",
+        "cardImage": {
+          "imageSrc": "./images/youtube-channels/kipper.jpg",
+          "imageAlt": "Fernanda Kipper"
+        },
+        "cardTitle": "Fernanda Kipper"
+      },
+      {
+        "dataCategory": "youtube programacao carreira",
+        "cardLink": "https://www.youtube.com/@spacecodingg/videos",
+        "cardImage": {
+          "imageSrc": "./images/youtube-channels/spacecoding.jpg",
+          "imageAlt": "Giulia Bordignon"
+        },
+        "cardTitle": "Giulia Bordignon"
+      },
+      {
+        "dataCategory": "youtube programacao carreira javascript typescript ia",
+        "cardLink": "https://www.youtube.com/@GlauciaLemos",
+        "cardImage": {
+          "imageSrc": "./images/youtube-channels/glaucia-lemos.jpg",
+          "imageAlt": "Glaucia Lemos"
+        },
+        "cardTitle": "Glaucia Lemos"
+      },
+      {
+        "dataCategory": "youtube programacao carreira angular java",
+        "cardLink": "https://www.youtube.com/loianegroner",
+        "cardImage": {
+          "imageSrc": "./images/youtube-channels/loiane.jpg",
+          "imageAlt": "Loiane Groner"
+        },
+        "cardTitle": "Loiane Groner"
+      }
+    ]
+  },
+  {
+    "htmlAttributes": {
+      "classNameSection": "content-section container",
+      "idSection": "videos-articles",
+      "classNameList": "blog-grid",
+      "classNameLink": "card"
+    },
+    "items": [
+      {
+        "dataCategory": "youtube ia",
+        "cardLink": "https://www.youtube.com/watch?v=YSGxHZEwnGY",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/aumente-sua-produtividade-com-github-copilot.avif",
+          "imageAlt": "Vídeo: Aumente sua produtividade com GitHub Copilot"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "Aumente sua produtividade com GitHub Copilot",
+        "cardDescription": "Você já conhece o Visual Studio Code, um dos editores de código mais populares do mundo, mas será que está aproveitando todo o seu potencial? Se deseja levar sua experiência de desenvolvimento a um nível superior, este workshop é para você!",
+        "cardMetaData": "Glaucia Lemos • 34 min"
+      },
+      {
+        "dataCategory": "youtube cloud",
+        "cardLink": "https://www.youtube.com/watch?v=4pT0nK3Whtc&t=10s",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/deploy-api-rest-serverless.avif",
+          "imageAlt": "Vídeo: AWS Lambda: Deploy de Uma Aplicação"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "AWS Lambda: Deploy de Uma Aplicação Com Node e Express",
+        "cardDescription": "Tutorial que ensina a implantar uma aplicação Node.js e Express no AWS Lambda usando o Serverless Framework, abordando integração com API Gateway, logs, tratamento de erros e boas práticas de deploy.",
+        "cardMetaData": "Alexia Kattah • 33 min"
+      },
+      {
+        "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=QnCFbYjT644",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/arquitetura-hexagonal-na-pratica.avif",
+          "imageAlt": "Vídeo: Arquitetura Hexagonal na Prática"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "Arquitetura Hexagonal na prática",
+        "cardDescription": "Depois de saber mais sobre os conceitos, como fica a arquitetura hexagonal na prática? Essa é uma dúvida que você vai tirar com a nossa especialista em engenharia de software, Monica Ribeiro, que explicou mais sobre essa arquitetura com base em um exemplo real. Confira!",
+        "cardMetaData": "Mônica Ribeiro • 17 min"
+      },
+      {
+        "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=yZfFQpBfEVI",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/ana-neri-system-desing-entrevistas-faang.avif",
+          "imageAlt": "Vídeo: System Design para Entrevistas FAANG"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "System Design para entrevistas FAANG: exemplo prático e completo",
+        "cardDescription": "Aprender system design vai muito além de entrevistas: é sobre tomar decisões técnicas conscientes. Nesse vídeo, eu mostro como criar a arquitetura de um sistema inspirado no ingresso.com — explicando os fundamentos essenciais que todo dev sênior precisa dominar.",
+        "cardMetaData": "Ana Neri • 40 min"
+      },
+      {
+        "dataCategory": "youtube",
+        "cardLink": "https://www.youtube.com/watch?v=_o5liNzApBE",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/programacao-funcional.avif",
+          "imageAlt": "Vídeo: Programação Funcional - JavaScript"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "Programação Funcional em JavaScript",
+        "cardDescription": "Programação Funcional em Javascript, breve explicação sobre paradigmas de programação (imperativo, declarativo), fundamentos da programação funcional (funções puras, composição de função, estado compartilhado, mutabilidade, efeitos colaterais), expondo diferença entre função pura e impura, overview de aplicação de programação funcional com Javascript e vantagens da implementação.",
+        "cardMetaData": "Lyssa Cavalcanti • 10 min"
+      },
+      {
+        "dataCategory": "youtube",
+        "cardLink": "https://www.youtube.com/watch?v=uYH9lqQzkOw",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/5-formas-renda-extra.avif",
+          "imageAlt": "Vídeo: 5 ideias para programadores terem Renda Extra"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "5 ideias para programadores terem RENDA EXTRA",
+        "cardDescription": "Sabemos que programadores ganham muito acima da média, considerando outras profissões. Mas muito além da sua força de trabalho de fato, você pode aproveitar a vantagem de estar bem conectado a esse mundo digital para criar novas fontes de renda. Durante a minha carreira sempre tive um viés muito empreendedor e isso me ajudou a melhorar a minha receita.",
+        "cardMetaData": "Attekita Dev • 15 min"
+      }
+    ]
+  },
+  {
+    "title": "🎀 Comunidades",
+    "htmlAttributes": {
+      "classNameSection": "content-section container container-communities",
+      "idSection": "women-communities",
+      "classNameList": "round-list",
+      "classNameLink": "round-card"
+    },
+    "items": [
+      {
+        "dataCategory": "comunidades front-end back-end dados",
+        "cardLink": "https://www.programaria.org/",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/programaria.jpg",
+          "imageAlt": "PrograMaria"
+        },
+        "cardTitle": "PrograMaria"
+      },
+      {
+        "dataCategory": "comunidades",
+        "cardLink": "https://programecomoumagarota.com/",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/programe-como-uma-garota.jpg",
+          "imageAlt": "Programe como uma garota"
+        },
+        "cardTitle": "Programe como </br> uma garota"
+      },
+      {
+        "dataCategory": "comunidades front-end dados",
+        "cardLink": "https://reprograma.com.br/",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/reprograma.jpg",
+          "imageAlt": "Reprograma"
+        },
+        "cardTitle": "{Reprograma}"
+      },
+      {
+        "dataCategory": "comunidades dados cloud azure github microsoft",
+        "cardLink": "https://womakerscode.org/",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/WoMakersCode.jpg",
+          "imageAlt": "WoMakersCode"
+        },
+        "cardTitle": "WoMakersCode"
+      }
+    ]
+  },
+  {
+    "htmlAttributes": {
+      "classNameSection": "content-section container community-articles",
+      "idSection": "community-articles",
+      "classNameList": "blog-grid",
+      "classNameLink": "card"
+    },
+    "items": [
+      {
+        "dataCategory": "evento",
+        "cardLink": "https://www.programaria.org/evento/programaria-encontros-presencial-mulheres-ti/",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/programaria/encontro-mes-mulher-febraban.png",
+          "imageAlt": "Evento: PrograMaria Encontros | Mais Mulheres na Tecnologia"
+        },
+        "cardTag": "Evento",
+        "cardTitle": "PrograMaria Encontros | Mais Mulheres na Tecnologia: comece sua carreira do futuro",
+        "cardDescription": "O evento presencial e gratuito Mais Mulheres na Tecnologia – Comece sua carreira do futuro, realizado pela PrograMaria em parceria com a FEBRABAN Sindical, Contraf e Contec, é a oportunidade para guiar a sua jornada, com conteúdo inspirador e networking para ampliar a sua rede profissional.",
+        "cardMetaData": "PrograMaria • 05/03"
+      },
+      {
+        "dataCategory": "artigo ia",
+        "cardLink": "https://www.linkedin.com/pulse/como-ia-est%C3%A1-reinventando-o-jeito-de-aprender-e-trabalhar-4kddf/?trackingId=%2BbQfKXzFJbBWhIDzWk2ZZw%3D%3D",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/womakerscode/como-a-ia-esta-reiventado-o-jeto-de-aprender-e-trabalhar.png",
+          "imageAlt": "Artigo: Como a IA está reinventando o jeito de aprender e trabalhar"
+        },
+        "cardTag": "Artigo",
+        "cardTitle": "Como a IA está reinventando o jeito de aprender e trabalhar",
+        "cardDescription": "Por muito tempo, aprender e trabalhar foram tratados como etapas separadas da vida profissional. Primeiro, estudar. Depois, aplicar. Primeiro, o diploma. Depois, a experiência. A Inteligência Artificial está desmontando essa lógica, e isso muda tudo.Por muito tempo, aprender e trabalhar foram tratados como etapas separadas da vida profissional. Primeiro, estudar. Depois, aplicar. Primeiro, o diploma. Depois, a experiência. A Inteligência Artificial está desmontando essa lógica, e isso muda tudo.",
+        "cardMetaData": "Cynthia Zanoni • 3 min"
+      },
+      {
+        "dataCategory": "curso",
+        "cardLink": "https://forms.zohopublic.com/programaria/form/AD1InscrionoProcessoSeletivodaBolsadeEstudo/formperma/fMueXfemtQtrf_6BqQ65Y3QmwoIywPpHhlWpb8qZAd8?utm_source=redes-sociais&utm_media=linkedin&utm_campaign=divulga%C3%A7%C3%A3o&utm_content=",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/programaria/aprender-dados.jpeg",
+          "imageAlt": "Curso: 1.000 bolsas de estudo para o curso de Análise de Dados"
+        },
+        "cardTag": "Curso",
+        "cardTitle": "1.000 Bolsas de estudos para o custo Análise de Dados",
+        "cardDescription": "A PrograMaria está com 1.000 bolsas de estudo para o curso Análise de Dados: Meus Primeiros Passos em Python. Inscrições abertas até 16/03.",
+        "cardMetaData": "PrograMaria • 1 min"
+      },
+      {
+        "dataCategory": "curso",
+        "cardLink": "https://www.linkedin.com/posts/womakerscode_womakerscode-dados-python-activity-7424142657544687616-c_AU?utm_source=share&utm_medium=member_desktop&rcm=ACoAACNYmUABQEA2oRBmy5Kdli3Grd65kmoikOI",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/womakerscode/bootcamp-data-analytics.jpeg",
+          "imageAlt": "BootCamp: Data Analytics"
+        },
+        "cardTag": "BootCamp",
+        "cardTitle": "Abertas as inscrições para o Bootcamp Data Analytics da WoMakersCode.",
+        "cardDescription": "Oportunidade imperdível para mulheres que querem iniciar uma carreira na área de Dados: a jornada de aprendizado inclui Python, SQL, Power BI, Tableau, Git e GitHub, além de conteúdos sobre estatística, computação em nuvem, métodos ágeis, plano de carreira e empregabilidade.",
+        "cardMetaData": "WoMakersCode • 1 min"
+      }
+    ]
+  },
+  {
+    "title": "📲 Instagram",
+    "htmlAttributes": {
+      "classNameSection": "content-section container last-article-section",
+      "idSection": "instagram-accounts",
+      "classNameList": "round-list",
+      "classNameLink": "round-card"
+    },
+    "items": [
+      {
+        "dataCategory": "instagram programacao front-end",
+        "cardLink": "https://www.instagram.com/ana.tech.dev/",
+        "cardImage": {
+          "imageSrc": "./images/redes-sociais/ana-tech-dev.jpg",
+          "imageAlt": "Ana Maria"
+        },
+        "cardTitle": "@ana.tech.dev"
+      },
+      {
+        "dataCategory": "instagram programacao carreira go",
+        "cardLink": "https://www.instagram.com/dev_steph/",
+        "cardImage": {
+          "imageSrc": "./images/redes-sociais/dev_steph.jpg",
+          "imageAlt": "Stephanie Cardoso"
+        },
+        "cardTitle": "@dev_steph"
+      },
+      {
+        "dataCategory": "instagram programacao cloud front-end react",
+        "cardLink": "https://www.instagram.com/monihillman/",
+        "cardImage": {
+          "imageSrc": "./images/redes-sociais/monihillman.jpg",
+          "imageAlt": "Moni Hillman"
+        },
+        "cardTitle": "@monihillman"
+      },
+      {
+        "dataCategory": "instagram ui ux design carreira",
+        "cardLink": "https://www.instagram.com/ninatalks/",
+        "cardImage": {
+          "imageSrc": "./images/redes-sociais/nina-talks.jpg",
+          "imageAlt": "Nina Talks"
+        },
+        "cardTitle": "@ninatalks"
+      },
+      {
+        "dataCategory": "instagram programacao carreira",
+        "cardLink": "https://www.instagram.com/spacecoding/",
+        "cardImage": {
+          "imageSrc": "./images/youtube-channels/spacecoding.jpg",
+          "imageAlt": "Giulia Bordignon"
+        },
+        "cardTitle": "@spacecoding"
+      }
+    ]
+  }
+]
