@@ -414,6 +414,7 @@ body[data-theme="dark"] .hero-image {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
+  text-align: center;
   text-decoration: none;
   font-weight: 600;
   box-shadow: var(--shadow-md);
