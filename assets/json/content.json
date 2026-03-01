@@ -125,6 +125,42 @@
         "cardTitle": "Lógica de programação com Portugol",
         "cardDescription": "O primeiro passo no mundo do desenvolvimento de aplicativos, softwares e sistemas informatizados envolve lógica de programação. É conhecer conceitos fundamentais sobre o funcionamento de comandos para passarmos para o computador o que ele deve fazer e qual a sequência correta do que deve ser feito. Isso se torna mais palpável com uma linguagem mais próxima à que já dominamos: o português.",
         "cardMetaData": "Joice Barbosa Mendes"
+      },
+      {
+        "dataCategory": "livro",
+        "cardLink": "https://amzn.to/4slmHiU",
+        "cardImage": {
+          "imageSrc": "./images/ebooks/loiane-estrutura-de-dados.jpg",
+          "imageAlt": "Livro: Estruturas de Dados e Algoritmos com JavaScript: Escreva um Código JavaScript Complexo e Eficaz Usando a Mais Recente ECMAScript"
+        },
+        "cardTag": "Livro",
+        "cardTitle": "Estruturas de Dados e Algoritmos com JavaScript",
+        "cardDescription": "Este livro é um guia abrangente para entender e implementar estruturas de dados e algoritmos em JavaScript. Com exemplos práticos e explicações claras, você aprenderá a escrever códigos mais eficientes e a resolver problemas complexos de forma eficaz.",
+        "cardMetaData": "Loiane Groner"
+      },
+      {
+        "dataCategory": "livro",
+        "cardLink": "https://amzn.to/40414Y7",
+        "cardImage": {
+          "imageSrc": "./images/ebooks/nina-da-hora-algoritmos.jpg",
+          "imageAlt": "Livro: MyNews Explica - Algoritmos"
+        },
+        "cardTag": "Livro",
+        "cardTitle": "MyNews Explica - Algoritmos",
+        "cardDescription": "Este livro não é apenas uma explanação técnica, mas sim um convite para a mente curiosa. Com exemplos do cotidiano, ilustro como algoritmos influenciam nossas decisões, desde recomendações até estratégias de vida. Foi importante selecionar e compartilhar ferramentas que decodifiquem o universo dos algoritmos para todos. Nós somos totalmente importantes para tomadas de decisões em um cenário cada vez mais algorítmico, entretanto, precisamos ter acesso a esse universo. Se você deseja desvendar o enigma por trás dos algoritmos que direcionam nossas vidas, este livro é uma pequena introdução.",
+        "cardMetaData": "Nina da Hora"
+      },
+      {
+        "dataCategory": "livro",
+        "cardLink": "https://amzn.to/40AuZY3",
+        "cardImage": {
+          "imageSrc": "./images/ebooks/elas-na-tecnologia.jpg",
+          "imageAlt": "Livro: Elas na Tecnologia: Codificadas Para o Sucesso"
+        },
+        "cardTag": "Livro",
+        "cardTitle": "Elas na Tecnologia: Codificadas Para o Sucesso",
+        "cardDescription": "O propósito deste livro é revelar narrativas de mulheres extraordinárias em tecnologia, com ecos das nossas experiências coletivas. Este livro reflete não só as batalhas e os obstáculos, mas também as vitórias e o conhecimento que conquistamos.",
+        "cardMetaData": "Lilian Ferreira & 35+"
       }
     ]
   },
