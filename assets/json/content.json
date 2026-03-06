@@ -348,6 +348,15 @@
         "cardTitle": "Mulheres em Dados"
       },
       {
+        "dataCategory": "comunidades dados data-science inteligencia-artificial ia",
+        "cardLink": "https://mulheres-em-ia.github.io/",
+        "cardImage": {
+          "imageSrc": "./images/comunidades/mia.jpg",
+          "imageAlt": "Mulheres em Inteligência Artificial"
+        },
+        "cardTitle": "Mulheres em Inteligência Artificial"
+      },
+      {
         "dataCategory": "comunidades front-end back-end dados",
         "cardLink": "https://www.programaria.org/",
         "cardImage": {
