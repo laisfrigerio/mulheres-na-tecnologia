@@ -266,6 +266,42 @@
       },
       {
         "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=yaNjUYg6yY0",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/kipper-curso-de-system-design.avif",
+          "imageAlt": "Curso de SYSTEM DESIGN | Do ZERO à ENTREVISTA"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "Curso de SYSTEM DESIGN | Do ZERO à ENTREVISTA",
+        "cardDescription": "System Design é uma das habilidades mais importantes para devs que querem construir sistemas escaláveis e também um dos temas mais cobrados em entrevistas para dev pleno e sênior.",
+        "cardMetaData": "Fernanda Kipper • 1h02min"
+      },
+      {
+        "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=6bTkTy6DjOQ",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/kipper-arquitetura-backend-facebook.avif",
+          "imageAlt": "ARQUITETURA BACKEND DO FACEBOOK | System Design"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "ARQUITETURA BACKEND DO FACEBOOK | System Design",
+        "cardDescription": "Nesse vídeo, vamos ver a fundo a arquitetura por trás da timeline do Facebook, de acordo com o próprio artigo escrito pelos engenheiros da Meta. Vamos ver como a utilização de cache, otimização de rede, normalização de banco de dados e várias outras técnicas fizeram eles conseguirem otimizar a timeline e elevar ela a outro patamar. Através desse artigo entendemos como a Meta lida com a escalabilidade, desempenho e eficiência de uma das maiores redes sociais do mundo.",
+        "cardMetaData": "Fernanda Kipper • 27min"
+      },
+      {
+        "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=-0Ja8QWCMYo",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/kipper-arquitetura-feed-twitter.avif",
+          "imageAlt": "INTRODUÇÃO Á MODELAGEM DE ARQUITETURA | Conceitos de System Design"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "INTRODUÇÃO Á MODELAGEM DE ARQUITETURA | Conceitos de System Design",
+        "cardDescription": "Neste vídeo, vamos encarar um desafio real de uma vaga internacional para programadores, que exige a elaboração de um Design System. Vamos explorar as etapas necessárias para criar design de um sistema eficaz, discutir as melhores práticas de arquitetura e aplicar conceitos chave para atender aos requisitos do desafio.",
+        "cardMetaData": "Fernanda Kipper • 1h46min"
+      },
+      {
+        "dataCategory": "youtube system-design",
         "cardLink": "https://www.youtube.com/watch?v=yZfFQpBfEVI",
         "cardImage": {
           "imageSrc": "./images/youtube-thumbnails/ana-neri-system-desing-entrevistas-faang.avif",
