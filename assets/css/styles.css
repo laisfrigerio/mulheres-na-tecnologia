@@ -548,6 +548,7 @@ body[data-theme="dark"] .hero-image {
   color: var(--color-text);
   text-align: center;
   transition: var(--transition);
+  width: 140px;
 }
 
 .round-card:hover {
