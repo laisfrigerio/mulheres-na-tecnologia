@@ -241,6 +241,18 @@
         "cardMetaData": "Glaucia Lemos • 34 min"
       },
       {
+        "dataCategory": "youtube carreira",
+        "cardLink": "https://www.youtube.com/watch?v=QKpcbfELfG0",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/space-coding-ser-mulher-na-tecnologia.avif",
+          "imageAlt": "Vídeo: Mulheres na Tecnologia: Por que a área tech é o melhor caminho para a tua liberdade?"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "Mulheres na Tecnologia: Por que a área tech é o melhor caminho para a tua liberdade?",
+        "cardDescription": "No mês da mulher, Gi escolheu falar sobre emancipação, poder de escolha e a liberdade que a tecnologia pode nos oferecer. Para nós, mulheres, a área tech vai muito além de hardware, infraestrutura ou linhas de código. É sobre ter nas mãos o poder de construir uma carreira sólida, que lá na frente vai nos proporcionar liberdade financeira, flexibilidade de tempo e independência geográfica. A tecnologia, sim, pode ser nossa maior ferramenta de emancipação.",
+        "cardMetaData": "Giulia Bordignon • 12 min"
+      },
+      {
         "dataCategory": "youtube cloud",
         "cardLink": "https://www.youtube.com/watch?v=4pT0nK3Whtc&t=10s",
         "cardImage": {
@@ -251,18 +263,6 @@
         "cardTitle": "AWS Lambda: Deploy de Uma Aplicação Com Node e Express",
         "cardDescription": "Tutorial que ensina a implantar uma aplicação Node.js e Express no AWS Lambda usando o Serverless Framework, abordando integração com API Gateway, logs, tratamento de erros e boas práticas de deploy.",
         "cardMetaData": "Alexia Kattah • 33 min"
-      },
-      {
-        "dataCategory": "youtube system-design",
-        "cardLink": "https://www.youtube.com/watch?v=QnCFbYjT644",
-        "cardImage": {
-          "imageSrc": "./images/youtube-thumbnails/arquitetura-hexagonal-na-pratica.avif",
-          "imageAlt": "Vídeo: Arquitetura Hexagonal na Prática"
-        },
-        "cardTag": "Youtube",
-        "cardTitle": "Arquitetura Hexagonal na prática",
-        "cardDescription": "Depois de saber mais sobre os conceitos, como fica a arquitetura hexagonal na prática? Essa é uma dúvida que você vai tirar com a nossa especialista em engenharia de software, Monica Ribeiro, que explicou mais sobre essa arquitetura com base em um exemplo real. Confira!",
-        "cardMetaData": "Mônica Ribeiro • 17 min"
       },
       {
         "dataCategory": "youtube system-design",
@@ -311,6 +311,42 @@
         "cardTitle": "System Design para entrevistas FAANG: exemplo prático e completo",
         "cardDescription": "Aprender system design vai muito além de entrevistas: é sobre tomar decisões técnicas conscientes. Nesse vídeo, eu mostro como criar a arquitetura de um sistema inspirado no ingresso.com — explicando os fundamentos essenciais que todo dev sênior precisa dominar.",
         "cardMetaData": "Ana Neri • 40 min"
+      },
+      {
+        "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=PuQGxhPRpDs&t=1263s",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/ana-neri-system-desing-mock-interview-olx.avif",
+          "imageAlt": "Vídeo: RECRIANDO A OLX - Mock System Design Interview"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "RECRIANDO A OLX - Mock System Design Interview",
+        "cardDescription": "Aprender system design vai muito além de entrevistas: é sobre tomar decisões técnicas conscientes. Nesse vídeo, eu mostro como criar a arquitetura de um sistema inspirado no ingresso.com — explicando os fundamentos essenciais que todo dev sênior precisa dominar.",
+        "cardMetaData": "Ana Neri • 1h17min"
+      },
+      {
+        "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=YjPM2YS_x6g",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/ana-neri-system-e-commerce.avif",
+          "imageAlt": "Vídeo: System Design na Prática: E-commerce com Microservices, Auth e Eventos"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "System Design na Prática: E-commerce com Microservices, Auth e Eventos",
+        "cardDescription": "Este vídeo aborda o tema System Design focado na arquitetura de um e-commerce, detalhando as etapas essenciais para enfrentar entrevistas técnicas de alto nível.",
+        "cardMetaData": "Ana Neri • 35min"
+      },
+      {
+        "dataCategory": "youtube system-design",
+        "cardLink": "https://www.youtube.com/watch?v=QnCFbYjT644",
+        "cardImage": {
+          "imageSrc": "./images/youtube-thumbnails/arquitetura-hexagonal-na-pratica.avif",
+          "imageAlt": "Vídeo: Arquitetura Hexagonal na Prática"
+        },
+        "cardTag": "Youtube",
+        "cardTitle": "Arquitetura Hexagonal na prática",
+        "cardDescription": "Depois de saber mais sobre os conceitos, como fica a arquitetura hexagonal na prática? Essa é uma dúvida que você vai tirar com a nossa especialista em engenharia de software, Monica Ribeiro, que explicou mais sobre essa arquitetura com base em um exemplo real. Confira!",
+        "cardMetaData": "Mônica Ribeiro • 17 min"
       },
       {
         "dataCategory": "youtube",
@@ -439,18 +475,6 @@
     },
     "items": [
       {
-        "dataCategory": "evento",
-        "cardLink": "https://www.programaria.org/evento/programaria-encontros-presencial-mulheres-ti/",
-        "cardImage": {
-          "imageSrc": "./images/comunidades/programaria/encontro-mes-mulher-febraban.png",
-          "imageAlt": "Evento: PrograMaria Encontros | Mais Mulheres na Tecnologia"
-        },
-        "cardTag": "Evento",
-        "cardTitle": "PrograMaria Encontros | Mais Mulheres na Tecnologia: comece sua carreira do futuro",
-        "cardDescription": "O evento presencial e gratuito Mais Mulheres na Tecnologia – Comece sua carreira do futuro, realizado pela PrograMaria em parceria com a FEBRABAN Sindical, Contraf e Contec, é a oportunidade para guiar a sua jornada, com conteúdo inspirador e networking para ampliar a sua rede profissional.",
-        "cardMetaData": "PrograMaria • 05/03"
-      },
-      {
         "dataCategory": "artigo ia",
         "cardLink": "https://www.linkedin.com/pulse/como-ia-est%C3%A1-reinventando-o-jeito-de-aprender-e-trabalhar-4kddf/?trackingId=%2BbQfKXzFJbBWhIDzWk2ZZw%3D%3D",
         "cardImage": {
@@ -463,28 +487,28 @@
         "cardMetaData": "Cynthia Zanoni • 3 min"
       },
       {
-        "dataCategory": "curso",
-        "cardLink": "https://forms.zohopublic.com/programaria/form/AD1InscrionoProcessoSeletivodaBolsadeEstudo/formperma/fMueXfemtQtrf_6BqQ65Y3QmwoIywPpHhlWpb8qZAd8?utm_source=redes-sociais&utm_media=linkedin&utm_campaign=divulga%C3%A7%C3%A3o&utm_content=",
+        "dataCategory": "evento comunidade",
+        "cardLink": "https://www.linkedin.com/posts/womakerscode_meetup-s%C3%A3o-paulo-activity-7439701377888669696-ii5f?utm_source=share&utm_medium=member_desktop&rcm=ACoAACNYmUABQEA2oRBmy5Kdli3Grd65kmoikOI",
         "cardImage": {
-          "imageSrc": "./images/comunidades/programaria/aprender-dados.jpeg",
-          "imageAlt": "Curso: 1.000 bolsas de estudo para o curso de Análise de Dados"
+          "imageSrc": "./images/comunidades/womakerscode/meetup-celebrando-poder-feminino.png",
+          "imageAlt": "Meetup: No dia 21 de março acontece o Meetup Celebrando o Poder Feminino, um encontro criado para reunir mulheres da comunidade em uma conversa aberta sobre carreira, tecnologia e crescimento profissional. Será um momento de troca, aprendizado e conexão com mulheres que estão construindo trajetórias inspiradoras na área de tecnologia. Clique para mais informações."
         },
-        "cardTag": "Curso",
-        "cardTitle": "1.000 Bolsas de estudos para o custo Análise de Dados",
-        "cardDescription": "A PrograMaria está com 1.000 bolsas de estudo para o curso Análise de Dados: Meus Primeiros Passos em Python. Inscrições abertas até 16/03.",
-        "cardMetaData": "PrograMaria • 1 min"
+        "cardTag": "meetup",
+        "cardTitle": "Meetup: Celebrando o Poder Feminino",
+        "cardDescription": "No dia 21 de março acontece o Meetup Celebrando o Poder Feminino, um encontro criado para reunir mulheres da comunidade em uma conversa aberta sobre carreira, tecnologia e crescimento profissional. Será um momento de troca, aprendizado e conexão com mulheres que estão construindo trajetórias inspiradoras na área de tecnologia. Clique para mais informações.",
+        "cardMetaData": "WoMakersCode • 21 de março"
       },
       {
-        "dataCategory": "curso",
-        "cardLink": "https://www.linkedin.com/posts/womakerscode_womakerscode-dados-python-activity-7424142657544687616-c_AU?utm_source=share&utm_medium=member_desktop&rcm=ACoAACNYmUABQEA2oRBmy5Kdli3Grd65kmoikOI",
+        "dataCategory": "artigo ia",
+        "cardLink": "https://www.linkedin.com/pulse/como-ia-est%C3%A1-reinventando-o-jeito-de-aprender-e-trabalhar-4kddf/?trackingId=%2BbQfKXzFJbBWhIDzWk2ZZw%3D%3D",
         "cardImage": {
-          "imageSrc": "./images/comunidades/womakerscode/bootcamp-data-analytics.jpeg",
-          "imageAlt": "BootCamp: Data Analytics"
+          "imageSrc": "./images/comunidades/womakerscode/aprender-a-programar-nunca-foi-sobre-codigo.png",
+          "imageAlt": "Artigo: Aprender a programar nunca foi sobre código"
         },
-        "cardTag": "BootCamp",
-        "cardTitle": "Abertas as inscrições para o Bootcamp Data Analytics da WoMakersCode.",
-        "cardDescription": "Oportunidade imperdível para mulheres que querem iniciar uma carreira na área de Dados: a jornada de aprendizado inclui Python, SQL, Power BI, Tableau, Git e GitHub, além de conteúdos sobre estatística, computação em nuvem, métodos ágeis, plano de carreira e empregabilidade.",
-        "cardMetaData": "WoMakersCode • 1 min"
+        "cardTag": "Artigo",
+        "cardTitle": "Aprender a programar nunca foi sobre código",
+        "cardDescription": "Cynthia Zanoni comemora 10 anos de carreira na Microsoft, trabalhando nos últimos anos com inteligência artificial no ecossistema do VS Code. Diante dessa trajetória, ela reflete sobre as transformações do mercado de tecnologia e levanta a questão central: ainda vale a pena aprender a programar?",
+        "cardMetaData": "Cynthia Zanoni • 3 min"
       }
     ]
   },
