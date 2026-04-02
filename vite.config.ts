@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import fs from "fs";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -12,7 +13,21 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "copy-404",
+      apply: "build",
+      generateBundle() {
+        // Copiar 404.html para o dist após o build
+        const src = path.resolve(__dirname, "./404.html");
+        const dst = path.resolve(__dirname, "./dist/404.html");
+        if (fs.existsSync(src)) {
+          fs.copyFileSync(src, dst);
+        }
+      },
+    },
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

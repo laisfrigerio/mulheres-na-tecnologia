@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página não encontrada | Mulheres na Tecnologia</title>
+    <script>
+      // Handle SPA routing for GitHub Pages
+      // Extract the path after /mulheres-na-tecnologia/
+      const fullPath = window.location.pathname;
+      const basePath = "/mulheres-na-tecnologia/";
+
+      // Se a rota foi acessada no GitHub Pages, redirecionar para index.html com query param
+      if (fullPath !== basePath && !fullPath.endsWith("/index.html")) {
+        const route = fullPath.startsWith(basePath)
+          ? fullPath.slice(basePath.length)
+          : fullPath.slice(1);
+
+        // Redirecionar para index.html passando a rota como query param
+        window.location.replace(
+          basePath + "?route=" + encodeURIComponent(route)
+        );
+      } else {
+        // Se já estamos no index.html, voltar para a página inicial
+        window.location.replace(basePath);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecionando...</p>
+  </body>
+</html>
