@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Production
+.next/
+out/
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.git/
+.gitignore
+LICENSE
+CNAME

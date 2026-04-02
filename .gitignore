@@ -1,0 +1,39 @@
+# TypeScript Strict Mode
+1
+
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+*.lock
+pnpm-lock.yaml
+yarn.lock
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+.next/
+
+# Production
+/build
+/dist
+.vercel/
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.*.local
+.idea/
+*.log
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
