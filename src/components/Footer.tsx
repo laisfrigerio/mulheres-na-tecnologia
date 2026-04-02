@@ -1,14 +1,5 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { getCurrentYear } from "@/utils/scroll";
-
-export const Footer = () => {
-  const [year, setYear] = useState<number>(2024);
-
-  useEffect(() => {
-    setYear(getCurrentYear());
-  }, []);
+const Footer = () => {
+  const year = new Date().getFullYear();
 
   return (
     <footer
@@ -93,3 +84,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;

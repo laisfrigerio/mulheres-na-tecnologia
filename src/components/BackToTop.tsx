@@ -1,35 +1,23 @@
-"use client";
-
 import { useState, useEffect } from "react";
-import { handleBackToTopVisibility, scrollToTop } from "@/utils/scroll";
 
-export const BackToTop = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+const BackToTop = () => {
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
-    if (!mounted) return;
-
-    const button = document.getElementById("back-to-top") as HTMLElement;
-    if (!button) return;
-
     const handleScroll = () => {
-      handleBackToTopVisibility(button);
+      setShow(window.scrollY > 300);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [mounted]);
+  }, []);
 
-  if (!mounted) return null;
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <button
-      id="back-to-top"
-      className="back-to-top"
+      className={`back-to-top ${show ? "show" : ""}`}
       onClick={scrollToTop}
       aria-label="Voltar ao topo"
     >
@@ -37,3 +25,5 @@ export const BackToTop = () => {
     </button>
   );
 };
+
+export default BackToTop;

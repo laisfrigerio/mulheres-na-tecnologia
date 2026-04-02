@@ -1,36 +1,30 @@
-"use client";
-
-import Image from "next/image";
-import { ContentItem } from "@/types/content";
+import { CardItem } from "@/types/content";
 
 interface RoundCardProps {
-  item: ContentItem;
-  className?: string;
+  item: CardItem;
 }
 
-export const RoundCard = ({
-  item,
-  className = "round-card",
-}: RoundCardProps) => {
+const RoundCard = ({ item }: RoundCardProps) => {
   return (
     <a
       href={item.cardLink}
       target="_blank"
       rel="noopener noreferrer"
-      className={className}
+      className="round-card"
       data-category={item.dataCategory}
     >
       <div className="round-image">
-        <Image
-          src={item.cardImage.imageSrc}
-          alt={item.cardImage.imageAlt}
-          width={140}
-          height={140}
-          loading="lazy"
-          style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-        />
+        {item.cardImage && (
+          <img
+            src={item.cardImage.imageSrc}
+            alt={item.cardImage.imageAlt}
+            loading="lazy"
+          />
+        )}
       </div>
       <p dangerouslySetInnerHTML={{ __html: item.cardTitle }} />
     </a>
   );
 };
+
+export default RoundCard;

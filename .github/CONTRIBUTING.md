@@ -78,67 +78,83 @@ Você quer sugerir artigos, vídeos, canais do YouTube, livros, comunidades ou p
 
 ### Como adicionar conteúdo
 
-#### Passo 1: Localize o arquivo `content.json`
+#### Passo 1: Identifique a categoria correta
 
+Os dados estão organizados em arquivos TypeScript em `src/data/`:
+
+| Arquivo                 | Categoria            | Descrição                                 |
+| ----------------------- | -------------------- | ----------------------------------------- |
+| `articles.ts`           | Artigos              | Artigos sobre tecnologia, carreira, etc.  |
+| `books.ts`              | Livros & E-books     | Livros e e-books educacionais             |
+| `youtube-channels.ts`   | Canais YouTube       | Canais de criadores que produzem conteúdo |
+| `videos.ts`             | Vídeos               | Vídeos individuais com tutoriais          |
+| `communities.ts`        | Comunidades          | Comunidades e grupos de mulheres na tech  |
+| `community-articles.ts` | Artigos Comunitários | Artigos publicados por comunidades        |
+| `instagram.ts`          | Instagram            | Perfis inspiradores no Instagram          |
+
+#### Passo 2: Adicione o novo item
+
+Abra o arquivo TypeScript correspondente (ex: `src/data/articles.ts`) e adicione um novo objeto seguindo a estrutura `CardItem`:
+
+```typescript
+// src/data/articles.ts
+export const articles: CardItem[] = [
+  // ... items existentes
+  {
+    dataCategory: "artigo carreira",
+    cardLink: "https://exemplo.com/artigo",
+    cardImage: {
+      imageSrc: "/images/artigos/novo-artigo.jpg",
+      imageAlt: "Descrição da imagem em português",
+    },
+    cardTag: "Artigo",
+    cardTitle: "Título do seu artigo",
+    cardDescription: "Descrição breve em 1-2 linhas explicando o conteúdo",
+    cardMetaData: "Autora Nome • 5 min", // tempo estimado de leitura
+  },
+];
 ```
-public/content.json
-```
 
-#### Passo 2: Identifique a seção apropriada
+#### Passo 3: Campos obrigatórios
 
-O arquivo `content.json` está organizado em 7 categorias principais:
-
-1. **Artigos** (`artigos`) - Artigos sobre tecnologia, arquitetura, carreira
-2. **Livros & E-books** (`livros`) - Livros e e-books educacionais
-3. **Canais do YouTube** (`canais`) - Canais de criadores(as) que produzem conteúdo
-4. **Vídeos** (`videos`) - Vídeos individuais com tutoriais e temas diversos
-5. **Comunidades** (`comunidades`) - Comunidades e grupos de mulheres na tech
-6. **Community Articles** (`community_articles`) - Artigos de comunidades específicas
-7. **Instagram** (`instagram`) - Perfis inspiradores no Instagram
-
-#### Passo 3: Adicione o novo item
-
-Cada item segue este formato:
-
-```json
-{
-  "id": "identificador-unico",
-  "title": "Título do Conteúdo",
-  "description": "Descrição breve (1-2 linhas) explicando o conteúdo",
-  "author": "Nome da Autora",
-  "link": "https://exemplo.com",
-  "imageSrc": "/images/categoria/imagem.jpg",
-  "imageAlt": "Descrição da imagem em português",
-  "type": "artigo|video|livro|canal|comunidade|instagram",
-  "tags": ["tag1", "tag2", "tag3"]
-}
-```
+- **cardLink**: URL do artigo/vídeo/comunidade (obrigatório)
+- **cardTitle**: Título do conteúdo (obrigatório)
+- **cardImage**: Objeto com `imageSrc` (URL da imagem) e `imageAlt` (descrição em português)
+- **cardTag**: Categoria do conteúdo (ex: "Artigo", "Vídeo", "Canal")
+- **cardDescription**: Descrição breve do conteúdo
+- **cardMetaData**: Autora e tempo estimado (ex: "Ana Silva • 5 min")
+- **dataCategory**: Categoria interna para filtros/organização (ex: "artigo system-design")
 
 #### Passo 4: Informações sobre imagens
 
-Se você está adicionando uma **nova imagem**:
+**Se você está adicionando uma nova imagem:**
 
-1. Coloque a imagem em [`public/images/`](../public/images/) na categoria apropriada
-2. Nomeie o arquivo de forma descritiva (ex: `sistema-design-entrevista.jpg`)
-3. Certifique-se de que a imagem é acessível (alt text em português)
+1. Adicione a imagem em `public/images/categoria/` (ex: `public/images/artigos/`)
+2. Nomeie de forma descritiva (ex: `sistema-design-entrevista.jpg`)
+3. Preferencialmente use formatos otimizados (JPEG, PNG, WebP)
+4. Certifique-se que o `imageAlt` está em português e é descritivo
 
-Se o recurso **não tem imagem disponível**, use uma imagem padrão existente da categoria.
+**Se não tiver imagem:**
+
+- Use uma imagem existente da mesma categoria, ou
+- Omita o campo `cardImage`
 
 #### Passo 5: Exemplo prático
 
 Para adicionar um artigo sobre carreira:
 
-```json
+```typescript
 {
-  "id": "carreira-mulheres-tech-2024",
-  "title": "Carreira de Mulheres na Tecnologia 2024",
-  "description": "Guia completo sobre oportunidades e desafios para mulheres que buscam crescer na carreira tech",
-  "author": "Ana Silva",
-  "link": "https://blog.exemplo.com/carreira-mulheres-tech",
-  "imageSrc": "/images/articles/career/carreira-2024.jpg",
-  "imageAlt": "Mulher sorrindo com notebook em ambiente de trabalho moderno",
-  "type": "artigo",
-  "tags": ["carreira", "crescimento profissional", "mulheres", "tecnologia"]
+  dataCategory: "artigo carreira",
+  cardLink: "https://blog.exemplo.com/carreira-mulheres-tech",
+  cardImage: {
+    imageSrc: "/images/artigos/carreira-2024.jpg",
+    imageAlt: "Mulher sorrindo com notebook em ambiente de trabalho moderno"
+  },
+  cardTag: "Artigo",
+  cardTitle: "Carreira de Mulheres na Tecnologia 2024",
+  cardDescription: "Guia completo sobre oportunidades e desafios para mulheres que buscam crescer na carreira tech",
+  cardMetaData: "Ana Silva • 8 min"
 }
 ```
 
@@ -147,11 +163,15 @@ Para adicionar um artigo sobre carreira:
 Antes de submeter seu PR, verifique:
 
 - ✅ O link funciona e leva ao conteúdo correto
-- ✅ A descrição é clara e concisa
-- ✅ O autor/criadora está creditado(a) corretamente
-- ✅ As tags são relevantes
-- ✅ A imagem existe ou está em uma categoria válida
+- ✅ O título está claro e atrativo
+- ✅ A descrição é concisa (1-2 linhas)
+- ✅ A autora/criadora está creditada corretamente no `cardMetaData`
+- ✅ A imagem existe ou será adicionada
+- ✅ O `imageAlt` está em português e é descritivo
 - ✅ Não há duplicação com itens existentes
+- ✅ O arquivo TypeScript está com sintaxe válida (sem erros de vírgulas, aspas, etc.)
+
+**Dica:** Se você não tem certeza sobre a formatação, copie um item existente e adapte!
 
 ---
 
@@ -160,7 +180,7 @@ Antes de submeter seu PR, verifique:
 ### Requisitos
 
 - **Node.js 18+** - [Instale aqui](https://nodejs.org/)
-- **npm** ou **yarn**
+- **npm** (gerenciador de pacotes)
 - Conhecimento básico de **React**, **TypeScript** e **CSS**
 - Familiaridade com **Git** e **GitHub**
 
@@ -174,118 +194,198 @@ cd mulheres-na-tecnologia
 # 2. Instale dependências
 npm install
 
-# 3. Configure variáveis de ambiente (opcional)
-cp .env.example .env.local
-# Edite .env.local se necessário para GA_ID, GTM_ID, etc.
-
-# 4. Inicie o servidor de desenvolvimento
+# 3. Inicie o servidor de desenvolvimento
 npm run dev
 
-# 5. Abra no navegador
-# http://localhost:3000
+# 4. Abra no navegador
+# http://localhost:8080
+```
+
+### Construindo e testando
+
+```bash
+# Build para produção
+npm run build
+
+# Preview do build de produção
+npm run preview
+
+# Validar código com ESLint
+npm run lint
+
+# Executar testes
+npm test
+
+# Executar testes em modo watch
+npm run test:watch
 ```
 
 ### Estrutura do projeto
 
 ```
-src/
-├── app/                    # Rotas e layout (Next.js App Router)
-│   ├── layout.tsx         # Layout raiz com metadata
-│   ├── page.tsx           # Página principal - usa componentes de Contents
-│   ├── artigos/
-│   │   └── page.tsx       # Página de artigos - renderiza <Articles />
-│   ├── livros/
-│   │   └── page.tsx       # Página de livros - renderiza <Books />
-│   ├── canais-youtube/
-│   │   └── page.tsx       # Página de canais - renderiza <YouTubeChannels />
-│   ├── videos/
-│   │   └── page.tsx       # Página de vídeos - renderiza <Videos />
-│   ├── comunidades/
-│   │   └── page.tsx       # Página de comunidades - renderiza <Communities />
-│   ├── artigos-comunidades/
-│   │   └── page.tsx       # Página de artigos de comunidades - renderiza <CommunityArticles />
-│   ├── instagram/
-│   │   └── page.tsx       # Página de Instagram - renderiza <Instagram />
-│   └── sessoes/
-│       └── page.tsx       # Hub de navegação das seções
-├── components/            # Componentes React reutilizáveis
-│   ├── Hero.tsx          # Seção hero
-│   ├── Contents.tsx       # Componentes para cada seção (Articles, Books, Videos, etc.)
-│   ├── SectionPage.tsx    # Layout wrapper para páginas de seção
-│   ├── ContentSection.tsx # Renderiza seções de cards
-│   ├── ContentCard.tsx    # Card individual
-│   ├── RoundCard.tsx      # Card redondo (avatares)
-│   ├── ThemeToggle.tsx    # Botão de tema claro/escuro
-│   ├── BackToTop.tsx      # Botão voltar ao topo
-│   ├── Community.tsx      # Seção de comunidade
-│   └── Footer.tsx         # Rodapé
-├── types/                 # Tipos TypeScript
-│   └── content.ts         # Interfaces de conteúdo
-├── lib/                   # Bibliotecas e utilitários server-side
-│   └── content.ts         # Funções para ler arquivos de conteúdo
-├── data/                  # Dados e configurações
-│   └── contentSections.ts # Mapeamento de seções e rotas
-├── utils/                 # Funções auxiliares
-│   ├── theme.ts          # Gerenciamento de tema
-│   ├── scroll.ts         # Utilitários de scroll
-│   └── filter.ts         # Lógica de filtros
-└── styles/               # Estilos globais
-    └── globals.css       # CSS com design tokens
-
-public/
-├── content/              # Arquivos de conteúdo organizados
-│   ├── articles.json
-│   ├── books.json
-│   ├── youtube-channels.json
-│   ├── videos.json
-│   ├── communities.json
-│   ├── community-articles.json
-│   └── instagram.json
-└── images/               # Imagens organizadas por categoria
-    ├── articles/
-    ├── books/
-    ├── channels/
-    ├── videos/
-    ├── communities/
-    └── social/
+mulheres-na-tecnologia/
+├── src/
+│   ├── components/           # Componentes React reutilizáveis
+│   │   ├── ui/              # Componentes ShadCN/UI (Radix UI base)
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   └── ...          # Outros componentes UI
+│   │   ├── App.tsx          # Componente raiz com roteamento
+│   │   ├── BlogCard.tsx     # Card para artigos/blogs
+│   │   ├── CommunitySection.tsx  # Seção de comunidades
+│   │   ├── ContentSection.tsx    # Renderiza seções de cards
+│   │   ├── Footer.tsx       # Rodapé
+│   │   ├── Hero.tsx         # Seção hero principal
+│   │   ├── NavLink.tsx      # Link de navegação
+│   │   ├── RoundCard.tsx    # Card redondo (avatares, perfis)
+│   │   ├── ThemeToggle.tsx  # Alternador tema claro/escuro
+│   │   ├── BackToTop.tsx    # Botão voltar ao topo
+│   │   └── ...
+│   │
+│   ├── pages/               # Páginas da aplicação
+│   │   ├── Index.tsx        # Página principal
+│   │   └── NotFound.tsx     # Página 404
+│   │
+│   ├── data/                # Dados e configurações (TypeScript)
+│   │   ├── articles.ts      # Dados de artigos
+│   │   ├── books.ts         # Dados de livros e e-books
+│   │   ├── communities.ts   # Dados de comunidades
+│   │   ├── community-articles.ts  # Dados de artigos de comunidades
+│   │   ├── instagram.ts     # Dados de perfis Instagram
+│   │   ├── videos.ts        # Dados de vídeos individuais
+│   │   └── youtube-channels.ts   # Dados de canais YouTube
+│   │
+│   ├── types/               # Tipos TypeScript
+│   │   └── content.ts       # Interfaces: CardItem, ContentSection, etc.
+│   │
+│   ├── hooks/               # React Hooks customizados
+│   │   ├── use-mobile.tsx   # Detectar viewport mobile
+│   │   └── use-toast.ts     # Hook para notificações
+│   │
+│   ├── lib/                 # Funções utilitárias
+│   │   └── utils.ts         # Utilitários gerais
+│   │
+│   ├── test/                # Arquivos de teste
+│   │   ├── example.test.ts  # Exemplo de teste
+│   │   └── setup.ts         # Setup de testes
+│   │
+│   ├── App.tsx              # Componente raiz e roteamento
+│   ├── App.css              # Estilos da aplicação
+│   ├── index.css            # Estilos globais
+│   ├── main.tsx             # Ponto de entrada React
+│   └── vite-env.d.ts        # Tipagem Vite
+│
+├── public/                  # Arquivos estáticos
+│   ├── images/              # Imagens organizadas por categoria
+│   │   ├── artigos/
+│   │   ├── comunidades/
+│   │   ├── ebooks/
+│   │   ├── redes-sociais/
+│   │   ├── youtube-channels/
+│   │   └── youtube-thumbnails/
+│   └── robots.txt
+│
+├── Configuration Files
+│   ├── vite.config.ts       # Configuração Vite
+│   ├── tsconfig.json        # Configuração TypeScript
+│   ├── tailwind.config.ts   # Configuração Tailwind CSS
+│   ├── postcss.config.js    # Configuração PostCSS
+│   ├── eslint.config.js     # Configuração ESLint
+│   ├── vitest.config.ts     # Configuração Vitest
+│   ├── playwright.config.ts # Configuração Playwright
+│   ├── playwright-fixture.ts# Fixtures Playwright
+│   └── package.json         # Dependências e scripts npm
+│
+├── index.html               # HTML principal
+├── README.md                # Documentação do projeto
+└── LICENSE                  # Licença MIT
 ```
 
 #### Padrão de Arquitetura
 
-O projeto segue um padrão de **composição de componentes** para clareza e reusabilidade:
+O projeto usa **React Router** para navegação client-side e **dados centralizados em TypeScript** para melhor type-safety:
 
-1. **Seções de conteúdo** são definidas em `src/components/Contents.tsx` como componentes async
-2. **Páginas** (`src/app/*/page.tsx`) importam componentes de Contents e os renderizam dentro de `SectionPage`
-3. **SectionPage** é um componente de layout puro que recebe `children` e renderiza navegação + footer
+**Fluxo de dados:**
+
+1. **Dados armazenados em TypeScript** (`src/data/articles.ts`, etc.)
+   - Arrays de objetos `CardItem` ou estruturas similares
+   - Type-safe com interfaces definidas em `src/types/content.ts`
+
+2. **Componentes apresentam dados**
+   - Importam dados de `src/data/`
+   - Renderizam com componentes como `BlogCard`, `RoundCard`, `ContentSection`
+
+3. **Roteamento com React Router** (`src/App.tsx`)
+   - Define rotas para diferentes páginas
+   - Page components em `src/pages/` importam e mostram dados
 
 **Exemplo prático:**
 
 ```tsx
-// src/app/artigos/page.tsx
-import { SectionPage } from "@/components/SectionPage";
-import { Articles } from "@/components/Contents";
+// src/pages/Index.tsx - Página principal
+import { Hero } from "@/components/Hero";
+import { articles } from "@/data/articles";
+import { BlogCard } from "@/components/BlogCard";
 
-export default async function ArtigosPage() {
+export default function HomePage() {
   return (
-    <SectionPage>
-      <Articles />
-    </SectionPage>
+    <main>
+      <Hero />
+      <section>
+        <h2>Artigos em Destaque</h2>
+        <div className="grid gap-4">
+          {articles.slice(0, 6).map((article) => (
+            <BlogCard key={article.cardLink} {...article} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 ```
 
-O componente `Articles` em `Contents.tsx`:
+**Estrutura de dados:**
 
-- Lê dados do arquivo `articles.json`
-- Renderiza `ContentSection` com os dados processados
-- É reutilizável em qualquer página ou contexto
+```typescript
+// src/types/content.ts
+export interface CardItem {
+  dataCategory?: string;
+  cardLink: string;
+  cardImage?: {
+    imageSrc: string;
+    imageAlt: string;
+  };
+  cardTag?: string;
+  cardTitle: string;
+  cardDescription?: string;
+  cardMetaData?: string;
+}
+
+// src/data/articles.ts
+export const articles: CardItem[] = [
+  {
+    dataCategory: "artigo system-design",
+    cardLink: "https://...",
+    cardImage: {
+      imageSrc: "/images/artigos/...",
+      imageAlt: "Descrição em português",
+    },
+    cardTag: "Artigo",
+    cardTitle: "Título do artigo",
+    cardDescription: "Descrição breve...",
+    cardMetaData: "Autora • 5 min",
+  },
+  // ... mais items
+];
+```
 
 **Benefícios:**
 
-- ✅ Sem duplicação de lógica de dados
-- ✅ Componentes reutilizáveis
-- ✅ Separação clara: rotas/layout vs. conteúdo
-- ✅ Fácil adicionar novas seções
+- ✅ Type-safe: TypeScript valida estruturas
+- ✅ Simples: dados centralizados em arquivos
+- ✅ Rápido: sem requisições HTTP, dados compactados
+- ✅ Fácil manter: novo artigo = adicionar objeto ao array
 
 ### Tipos de contribuição de desenvolvimento
 
@@ -322,100 +422,90 @@ O componente `Articles` em `Contents.tsx`:
 
 Se você quer adicionar uma nova categoria de conteúdo (ex: "Podcasts"), siga este padrão:
 
-**1. Crie o arquivo de dados** (`public/content/podcasts.json`)
-
-```json
-{
-  "title": "Podcasts",
-  "htmlAttributes": {
-    "idSection": "podcasts",
-    "classNameSection": "container content-section",
-    "classNameList": "content-list",
-    "classNameLink": "card-link"
-  },
-  "items": [
-    {
-      "id": "podcast-mulheres-tech",
-      "title": "Mulheres na Tech",
-      "description": "Podcast sobre histórias e experiências de mulheres na tecnologia",
-      "author": "Ana e Maria",
-      "link": "https://exemplo.com/podcast",
-      "imageSrc": "/images/podcasts/mulheres-tech.jpg",
-      "imageAlt": "Logo do Podcast Mulheres na Tech",
-      "type": "podcast",
-      "tags": ["podcast", "experiências", "carreira"]
-    }
-  ]
-}
-```
-
-**2. Adicione o componente em `src/components/Contents.tsx`**
+**1. Crie um arquivo de dados** em `src/data/podcasts.ts`
 
 ```typescript
-export async function Podcasts() {
-  const section = await readContentSection("podcasts.json");
-  return (
-    <ContentSection
-      section={{ ...section, title: section.title || "Podcasts" }}
-    />
-  );
-}
-```
+// src/data/podcasts.ts
+import type { CardItem } from "@/types/content";
 
-**3. Configure a rota em `src/data/contentSections.ts`**
-
-```typescript
-export const CONTENT_SECTION_FILES = [
-  // ... seções existentes
+export const podcasts: CardItem[] = [
   {
-    fileName: "podcasts.json",
-    title: "Podcasts",
-    slug: "podcasts",
-    path: "/podcasts",
+    dataCategory: "podcast carreira",
+    cardLink: "https://exemplo.com/podcast",
+    cardImage: {
+      imageSrc: "/images/youtube-thumbnails/podcast-mulheres-tech.jpg",
+      imageAlt: "Logo do Podcast Mulheres na Tech",
+    },
+    cardTag: "Podcast",
+    cardTitle: "Mulheres na Tech",
+    cardDescription:
+      "Podcast sobre histórias e experiências de mulheres na tecnologia",
+    cardMetaData: "Ana e Maria • 45 min por episódio",
   },
+  // ... mais podcasts
 ];
 ```
 
-**4. Crie a página em `src/app/podcasts/page.tsx`**
+**2. Adicione uma página para a nova seção** em `src/pages/Podcasts.tsx`
 
 ```typescript
-import { SectionPage } from "@/components/SectionPage";
-import { Podcasts } from "@/components/Contents";
+// src/pages/Podcasts.tsx
+import { podcasts } from "@/data/podcasts";
+import { BlogCard } from "@/components/BlogCard";
+import { Hero } from "@/components/Hero";
 
-export default async function PodcastsPage() {
+export default function PodcastsPage() {
   return (
-    <SectionPage>
-      <Podcasts />
-    </SectionPage>
+    <main>
+      <Hero />
+      <section className="container py-12">
+        <h1 className="text-3xl font-bold mb-6">Podcasts</h1>
+        <p className="text-gray-600 mb-8">
+          Ouça histórias inspiradoras de mulheres na tecnologia
+        </p>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {podcasts.map(podcast => (
+            <BlogCard key={podcast.cardLink} {...podcast} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 ```
 
-**5. Adicione o link em `src/app/sessoes/page.tsx`** (se quiser na seção de navegação)
+**3. Configure a rota em `src/App.tsx`**
 
 ```typescript
-<Link href="/podcasts" className="section-link">
-  <h3>Podcasts</h3>
-  <p>Ouça histórias de mulheres na tecnologia</p>
-</Link>
+// src/App.tsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "@/pages/Index";
+import PodcastsPage from "@/pages/Podcasts";
+import NotFoundPage from "@/pages/NotFound";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/podcasts" element={<PodcastsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 ```
 
-**6. (Opcional) Adicione na homepage** em `src/app/page.tsx`
+**4. (Opcional) Adicione um link na navegação** ou homepage
 
-```typescript
-import { Podcasts } from "@/components/Contents";
-
-// Em Home(), adicione:
-<Podcasts />
-```
+Você pode adicionar um link para a nova seção na página principal (`src/pages/Index.tsx`) ou em um menu de navegação.
 
 **Padrão em resumo:**
 
-1. JSON file com dados
-2. Componente async em Contents.tsx
-3. Registro em contentSections.ts
-4. Página route em src/app/[nomeSecao]/page.tsx
-5. (Opcional) Link em navegação ou homepage
+1. Dados em `src/data/[categoria].ts` com tipo `CardItem[]`
+2. Página em `src/pages/[Categoria].tsx` que importa os dados
+3. Rota em `src/App.tsx` mapeando URL para página
+4. Componentes renderizam dados com `BlogCard`, `RoundCard`, etc.
 
 #### Código
 
@@ -425,45 +515,48 @@ import { Podcasts } from "@/components/Contents";
 - ✅ Mantenha componentes **pequenos e focados**
 - ✅ Use **tipos explícitos** ao invés de `any`
 - ✅ Adicione **comentários** em lógica complexa
-- ✅ **Componentes de conteúdo** devem estar em `Contents.tsx`, não em pages
-- ✅ **Pages** devem ser leves - apenas importar e composicionar componentes
+- ✅ **Imports de dados**: importe de `src/data/` em páginas/componentes
+- ✅ **Páginas** devem ser simples: apenas importar dados e renderizar componentes
 
-**Padrão correto para páginas de seção:**
+**Padrão correto para páginas:**
 
 ```typescript
-// ✅ BOM - página focada em composição
-import { SectionPage } from "@/components/SectionPage";
-import { Articles } from "@/components/Contents";
+// ✅ BOM - página simples e focada
+import { articles } from "@/data/articles";
+import { BlogCard } from "@/components/BlogCard";
+import { Hero } from "@/components/Hero";
 
-export default async function ArtigosPage() {
+export default function ArtigosPage() {
   return (
-    <SectionPage>
-      <Articles />
-    </SectionPage>
+    <main>
+      <Hero />
+      <section className="container py-12">
+        <h1 className="text-3xl font-bold">Artigos</h1>
+        <div className="grid gap-4 md:grid-cols-3">
+          {articles.map(article => (
+            <BlogCard key={article.cardLink} {...article} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 ```
 
 ```typescript
-// ❌ EVITE - lógica de dados na página
-import { readContentSection } from "@/lib/content";
-import { ContentSection } from "@/components/ContentSection";
+// ❌ EVITE - lógica complexa nas páginas
+export default function ArtigosPage() {
+  const [filtered, setFiltered] = useState([]);
 
-export default async function ArtigosPage() {
-  const section = await readContentSection("articles.json");
-  return (
-    <SectionPage>
-      <ContentSection section={section} />
-    </SectionPage>
-  );
+  useEffect(() => {
+    // fetch ou processamento complexo
+  }, []);
+
+  return ...
 }
 ```
 
-**Rationale**:
-
-- Componentes de conteúdo em `Contents.tsx` podem ser reutilizados (homepage, novas pages, etc.)
-- Pages ficam simples e legíveis
-- Sem duplicação de lógica de data fetching
+**Por que?** Mantém páginas simples e legíveis. Lógica complexa vai em hooks customizados (`src/hooks/`) se necessário.
 
 #### Commits
 
@@ -520,20 +613,30 @@ Adicionei um novo artigo sobre web performance às seções de conteúdo.
 
 ## Mudanças
 
-- Adicionado item em public/content.json
-- Adicionada imagem em public/images/articles/
-- Atualizado arquivo com alt text descritivo
+- Adicionado item em `src/data/articles.ts`
+- Adicionada imagem em `public/images/artigos/`
+- Atualizado a interface TypeScript com alt text descritivo
+
+## Tipos de mudança
+
+- [ ] Novo conteúdo (artigos, vídeos, comunidades, etc.)
+- [ ] Bug fix
+- [ ] Feature nova
+- [ ] Melhoria de design/UX
+- [ ] Documentação
 
 ## Relacionado
 
-Fixes #123 (se aplicável)
+Closes #123 (se aplicável)
 
 ## Checklist
 
-- [x] Testei localmente
-- [x] Arquivo JSON validado
-- [x] Imagem otimizada
-- [x] Sem erros de TypeScript
+- [x] Testei localmente (`npm run dev`)
+- [x] Arquivo TypeScript com sintaxe válida
+- [x] Imagem otimizada e adicionada ao `public/images/`
+- [x] Sem erros de TypeScript (`npm run lint`)
+- [x] Alt text em português e descritivo
+- [x] Link do conteúdo funciona
 ```
 
 ### 3. Revisão
@@ -553,10 +656,31 @@ Após aprovação, seu PR será merged ao main! 🎉
 
 ### CSS/Design
 
-- Use **variáveis CSS** para cores e espaçamento (ver `globals.css`)
-- Mantenha **design responsivo** - mobile first
-- Siga a **paleta de cores** existente
-- Teste em **modo claro e escuro**
+- Use **Tailwind CSS** para estilização (classes utilitárias)
+- Importe componentes **ShadCN/UI** quando possível (`src/components/ui/`)
+- Mantenha **design responsivo** - mobile first com breakpoints `sm:`, `md:`, `lg:`
+- Siga a **paleta de cores** definida em `tailwind.config.ts`
+- Teste em **modo claro e escuro** usando `ThemeToggle`
+- Use **variáveis CSS customizadas** para cores semânticas (dark mode)
+
+**Exemplo com Tailwind + ShadCN:**
+
+```tsx
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+
+export function MyComponent() {
+  return (
+    <Card className="p-6 md:p-8">
+      <h2 className="text-2xl font-bold mb-4">Título</h2>
+      <p className="text-gray-600 dark:text-gray-400 mb-6">
+        Descrição com suporte a tema claro/escuro
+      </p>
+      <Button className="w-full md:w-auto">Ação</Button>
+    </Card>
+  );
+}
+```
 
 ### TypeScript
 

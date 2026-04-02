@@ -1,33 +1,24 @@
-"use client";
-
 import { useState, useEffect } from "react";
-import { toggleTheme, setTheme, initializeTheme, Theme } from "@/utils/theme";
 
-export const ThemeToggle = () => {
-  const [theme, setThemeState] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
+const ThemeToggle = () => {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
 
   useEffect(() => {
-    setMounted(true);
-    const initialTheme = initializeTheme();
-    setThemeState(initialTheme);
-  }, []);
+    document.body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
-  const handleToggle = () => {
-    const newTheme = toggleTheme(theme);
-    setThemeState(newTheme);
+  const toggleTheme = () => {
+    setTheme(prev => prev === "light" ? "dark" : "light");
   };
 
-  if (!mounted) return null;
-
   return (
-    <button
-      id="theme-toggle"
-      className="theme-toggle"
-      onClick={handleToggle}
-      aria-label="Alternar tema"
-    >
+    <button className="theme-toggle" onClick={toggleTheme}>
       {theme === "light" ? "🌙" : "☀️"}
     </button>
   );
 };
+
+export default ThemeToggle;

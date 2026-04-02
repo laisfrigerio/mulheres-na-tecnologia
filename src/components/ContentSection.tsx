@@ -1,45 +1,42 @@
-"use client";
-
-import { ContentCard } from "./ContentCard";
-import { RoundCard } from "./RoundCard";
-import { ContentSection as ContentSectionType } from "@/types/content";
+import { CardItem } from "@/types/content";
+import BlogCard from "./BlogCard";
+import RoundCard from "./RoundCard";
 
 interface ContentSectionProps {
-  section: ContentSectionType;
+  title?: string;
+  items: CardItem[];
+  sectionClassName?: string;
+  listClassName?: string;
+  id?: string;
+  variant?: "blog" | "round";
 }
 
-export const ContentSection = ({ section }: ContentSectionProps) => {
-  const { title, htmlAttributes, items } = section;
-  const isRoundList = htmlAttributes.classNameList === "round-list";
-
+const ContentSection = ({
+  title,
+  items,
+  sectionClassName = "content-section container",
+  listClassName = "blog-grid",
+  id,
+  variant = "blog",
+}: ContentSectionProps) => {
   return (
-    <section
-      id={htmlAttributes.idSection}
-      className={htmlAttributes.classNameSection}
-    >
+    <section className={sectionClassName} id={id}>
       {title && (
         <div className="section-main-title">
-          <h2 dangerouslySetInnerHTML={{ __html: title }} />
+          <h2>{title}</h2>
         </div>
       )}
-
-      <div className={htmlAttributes.classNameList}>
+      <div className={listClassName}>
         {items.map((item, index) =>
-          isRoundList ? (
-            <RoundCard
-              key={index}
-              item={item}
-              className={htmlAttributes.classNameLink}
-            />
+          variant === "round" ? (
+            <RoundCard key={index} item={item} />
           ) : (
-            <ContentCard
-              key={index}
-              item={item}
-              className={htmlAttributes.classNameLink}
-            />
+            <BlogCard key={index} item={item} />
           )
         )}
       </div>
     </section>
   );
 };
+
+export default ContentSection;
